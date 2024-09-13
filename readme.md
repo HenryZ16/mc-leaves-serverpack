@@ -17,8 +17,6 @@ SHTechCraft四周目自用服务端，预计构建用时4-5分钟。
 ### 你可能需要持久化的文件 & 目录
 假设当前目录为MC服务器根目录（"*"表通配符）：
 ```
-authlib-injector.log
-auto_update
 banned-ips.json
 banned-players.json
 bukkit.yml
@@ -36,7 +34,6 @@ plugins/Maintenance
 plugins/SkinsRestorer
 spigot.yml
 usercache.json
-version_history.json
 whitelist.json
 world
 world_nether
