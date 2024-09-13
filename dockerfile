@@ -1,8 +1,8 @@
-FROM openjdk:21
+FROM ubuntu:22.04
 
-COPY ./build-server.sh /home/mc
-COPY ./server-icon.png /home/mc
-COPY ./server.properties /home/mc
+COPY ./build-server.sh /home/mc/build-server.sh
+COPY ./server-icon.png /home/mc/server-icon.png
+COPY ./server.properties /home/mc/server.properties
 
 RUN chmod +x /home/mc/build-server.sh \
     && /home/mc/build-server.sh
