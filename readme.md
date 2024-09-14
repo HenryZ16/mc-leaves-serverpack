@@ -8,11 +8,11 @@ SHTechCraft四周目自用服务端，预计构建用时4-5分钟。
 
 ### 插件
 已添加的插件（paper端，与leaves端兼容）：
-- Backuper
-- Chunky
-- Essentials
-- Maintenance
-- SkinsRestorer
+- [Backuper](https://hangar.papermc.io/Collagen/Backuper)
+- [Chunky](https://hangar.papermc.io/pop4959/Chunky)
+- [Essentials](https://hangar.papermc.io/EssentialsX/Essentials)
+- [Maintenance](https://hangar.papermc.io/kennytv/Maintenance)
+- [SkinsRestorer](https://hangar.papermc.io/SRTeam/SkinsRestorer)
 
 ### 你可能需要持久化的文件 & 目录
 假设当前目录为MC服务器根目录（"*"表通配符）：

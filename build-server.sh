@@ -19,6 +19,7 @@ dpkg -i jdk-21_linux-x64_bin.deb
 update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk-21/bin/java 1
 update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk-21/bin/javac 1
 update-alternatives --install /usr/bin/jar jar /usr/lib/jvm/jdk-21/bin/jar 1
+rm -f jdk-21_linux-x64_bin.deb
 
 ## Get the latest version of MCDReforged
 pip3 install mcdreforged -i https://pypi.tuna.tsinghua.edu.cn/simple
@@ -82,3 +83,5 @@ sed -i "s|^start_command: .*|start_command: \"$START_COMMAND\"|" config.yml
 
 ## configure handler
 sed -i "s|^handler: .*|handler: bukkit_handler|" config.yml
+
+echo "build done."
