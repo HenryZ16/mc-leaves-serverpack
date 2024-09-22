@@ -9,9 +9,13 @@ apt-get update
 ## install python3 & pip3
 apt-get install python3 -y
 apt-get install python3-pip -y
+pip config set global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
 
 ## install wget
 apt-get install wget -y
+
+## install tmux
+apt-get install tmux -y
 
 ## install java 21
 wget https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.deb
@@ -24,11 +28,28 @@ rm -f jdk-21_linux-x64_bin.deb
 ## Get the latest version of MCDReforged
 pip3 install mcdreforged -i https://pypi.tuna.tsinghua.edu.cn/simple
 
+### put your MCDR plugin requirement.txt links here ###
+
+pip3 install -r https://tisunion.github.io/PrimeBackup/requirements.txt
+pip3 install -r https://tisunion.github.io/PrimeBackup/requirements.optional.txt
+
+### put your MCDR plugin requirement.txt links here ###
+
 # $MC_PATH/mcdrserver 
 # Create a new server
 mkdir $MC_PATH/mcdrserver
 cd $MC_PATH/mcdrserver
 mcdreforged init
+
+# $MC_PATH/mcdrserver/plugins
+# get MCDR plugins
+cd $MC_PATH/mcdrserver/plugins
+
+### put your MCDR plugin links here ###
+
+wget https://github.com/TISUnion/PrimeBackup/releases/download/v1.8.3/PrimeBackup-v1.8.3.pyz
+
+### put your MCDR plugin links here ###
 
 # $MC_PATH/mcdrserver/server 
 # Download the "leaves" core of MC version 1.21
@@ -58,20 +79,6 @@ do
         sed -i "s/^$key=.*$/$key=$value/" $MC_PATH/mcdrserver/server/server.properties
     fi
 done < $MC_PATH/server.properties
-
-# $MC_PATH/mcdrserver/server/plugins
-# get plugins
-cd $MC_PATH/mcdrserver/server/plugins
-
-### put your plugin download links here ###
-
-wget https://github.com/EssentialsX/Essentials/releases/download/2.20.1/EssentialsX-2.20.1.jar
-wget https://github.com/SkinsRestorer/SkinsRestorer/releases/download/15.4.2/SkinsRestorer.jar
-wget https://hangarcdn.papermc.io/plugins/pop4959/Chunky/versions/1.4.10/PAPER/Chunky-1.4.10.jar
-wget https://hangarcdn.papermc.io/plugins/Collagen/Backuper/versions/3.0.1/PAPER/Backuper-3.0.1.jar
-wget https://hangarcdn.papermc.io/plugins/kennytv/Maintenance/versions/4.2.1/PAPER/Maintenance-4.2.1.jar
-
-### put your plugin download links here ###
 
 # $MC_PATH/mcdrserver/server
 # configure config.yml
